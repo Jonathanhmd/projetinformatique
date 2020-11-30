@@ -393,9 +393,5 @@ C4=[noise4,temp4,hum4,lum4,co2_4]
 C5=[noise5,temp5,hum5,lum5,co2_5]
 C6=[noise6,temp6,hum6,lum6,co2_6]
 
-# def result(capteur):
-#     for i in range(len(capteur)):
-#         if len(anomalie(capteur[i]))
-
 
 
