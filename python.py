@@ -236,10 +236,10 @@ def mediane(liste):
     else:
         return len(list)/2
   
-def humidex(humidite,temp):
+def humidex(hum,temp):
     H=[]
     for i in range(len(temp)):
-        H.append(temp[i]+(5/9)*(6.112*(10**(7.5*(temp[i]/(237.7+temp[i])))*(humidite[i]/100))-10))
+        H.append(temp[i]+(5/9)*(6.112*(10**(7.5*(temp[i]/(237.7+temp[i])))*(hum[i]/100))-10))
     return "humidex=", H
 
 
@@ -262,11 +262,14 @@ def idc(x,y):
 coeff_pearson=pearsonr(temp1,hum1)[0]
 print(coeff_pearson)
 print(idc(temp1,hum1))
+
 print(idc(temp2,hum2))
 print(idc(temp3,hum3))
 print(idc(temp4,hum4))
 print(idc(temp5,hum5))
 print(idc(temp6,hum6))
+
+
 
 "COMPARAISON"
 print('Moyenne température par capteur:')
@@ -349,28 +352,27 @@ print(ecart_type(co2_4))
 print(ecart_type(co2_5))
 print(ecart_type(co2_6))
 
-
-
-#print(idc(temperature2,humidite2))
-#
-#coeff_pearson=pearsonr(temperature2,humidite2)[0]
-#print(coeff_pearson)
-
+print(min(temperature))
+print(maxi(temperature))
+print(moy(temperature))
 
 x=date5
 y=temp5
+w=hum5
+v=lum5
+z=co2_5
 
-w=hum1
-v=lum6
-z=co2_6
-
-plt.plot(x,y,'.')
-# plt.plot(x,v,'.')
+plt.plot(x,y)
 plt.title('Evolution de la température en fonction du temps')
-plt.xlabel('lum')
-plt.ylabel('co2')
-#plt.text(2,20,"min=")
+plt.xlabel('date')
+plt.ylabel('temperature')
+plt.rc('xtick', labelsize=7)
+#plt.text(20,20.5,"min=20.5°C")
+#plt.text(2,28.5,"max=28.5°C")
+#plt.text(2,20.5,"moy=25.1°C")
+
 plt.show()
+
 plt.close()
 
 
@@ -384,18 +386,6 @@ def anomalie(liste):
         elif liste[i]>m+3*e_c:
             L.append(liste[i])
     return "anomalie", L
-
-
-C1=[noise1,temp1,hum1,lum1,co2_1]
-C2=[noise2,temp2,hum2,lum2,co2_2]
-C3=[noise3,temp3,hum3,lum3,co2_3]
-C4=[noise4,temp4,hum4,lum4,co2_4]
-C5=[noise5,temp5,hum5,lum5,co2_5]
-C6=[noise6,temp6,hum6,lum6,co2_6]
-
-# def result(capteur):
-#     for i in range(len(capteur)):
-#         if len(anomalie(capteur[i]))
 
 
 
