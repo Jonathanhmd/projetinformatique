@@ -353,27 +353,26 @@ print(ecart_type(co2_4))
 print(ecart_type(co2_5))
 print(ecart_type(co2_6))
 
-print(min(temperature))
-print(maxi(temperature))
-print(moy(temperature))
+print("min=",min(temp1))
+print("max=",maxi(temp1))
+print("moyenne=",moy(temp1))
 
-x=date5
-y=temp5
+x=date1
+y=temp1
 w=hum5
 v=lum5
 z=co2_5
 
-plt.plot(x,y)
+plt.plot(x,y,".")
 plt.title('Evolution de la température en fonction du temps')
 plt.xlabel('date')
 plt.ylabel('temperature')
 plt.rc('xtick', labelsize=7)
+plt.show()
+
 #plt.text(20,20.5,"min=20.5°C")
 #plt.text(2,28.5,"max=28.5°C")
 #plt.text(2,20.5,"moy=25.1°C")
-
-plt.show()
-
 plt.close()
 
 
