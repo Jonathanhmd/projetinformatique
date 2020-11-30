@@ -358,14 +358,14 @@ print(ecart_type(co2_6))
 
 
 x=date5
-y=temp1
+y=temp5
 
 w=hum1
-v=lum5
-z=co2_5
+v=lum6
+z=co2_6
 
-plt.plot(x,z,'.')
-plt.plot(x,v,'.')
+plt.plot(x,y,'.')
+# plt.plot(x,v,'.')
 plt.title('Evolution de la température en fonction du temps')
 plt.xlabel('lum')
 plt.ylabel('co2')
