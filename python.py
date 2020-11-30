@@ -240,7 +240,8 @@ def humidex(humidite,temp):
     H=[]
     for i in range(len(temp)):
         H.append(temp[i]+(5/9)*(6.112*(10**(7.5*(temp[i]/(237.7+temp[i])))*(humidite[i]/100))-10))
-    return H
+    return "humidex=", H
+
 
 
 def idc(x,y):
@@ -368,8 +369,7 @@ def anomalie(liste):
             L.append(liste[i])
         elif liste[i]>m+3*e_c:
             L.append(liste[i])
-    return L
-
+    return "anomalie", L
 
 
 
