@@ -4,11 +4,7 @@
 
 Ceci est un script temporaire.
 """
-<<<<<<< HEAD
-mkepojcpe
-=======
-NICOLAS
->>>>>>> 7ee2cae0a37f1812729d5159103f6653fdff1916
+
 import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
