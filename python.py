@@ -21,16 +21,17 @@ lum=fexcel['lum'].tolist()
 CO2=fexcel['co2'].tolist()
 num_capteur=fexcel['id'].tolist()
 
-"LECTURE DES DATES PAR PYTHON"
+"LECTURE DES DATES PAR PYTHON" #O(len(date_tableau))
 date=[]
 for i in range(len(date_tableau)):
     date.append(datetime.strptime(date_tableau[i],'%Y-%m-%d %H:%M:%S%z'))
 
-"CAPTEUR 1"
+    
+"CAPTEUR 1" #O(len(num_capteur1))
 date1=[]
 for i in range(len(date)):
     if num_capteur[i]==1:
-        date1.append(date[i])
+        date1.append(date[i])     
 noise1=[]
 for i in range(len(noise)):
     if num_capteur[i]==1:
@@ -52,7 +53,7 @@ for i in range(len(CO2)):
     if num_capteur[i]==1:
         co2_1.append(CO2[i])               
 
-"CAPTEUR 2"       
+"CAPTEUR 2" #O(len(num_capteur2))      
 date2=[]
 for i in range(len(date)):
     if num_capteur[i]==2:
@@ -78,7 +79,7 @@ for i in range(len(CO2)):
     if num_capteur[i]==2:
         co2_2.append(CO2[i])        
  
-"CAPTEUR 3"       
+"CAPTEUR 3" #O(len(num_capteur3))       
 date3=[]
 for i in range(len(date)):
     if num_capteur[i]==3:
@@ -104,7 +105,7 @@ for i in range(len(CO2)):
     if num_capteur[i]==3:
         co2_3.append(CO2[i])
 
-"CAPTEUR 4"        
+"CAPTEUR 4"  #O(len(num_capteur4))      
 date4=[]
 for i in range(len(date)):
     if num_capteur[i]==4:
@@ -130,7 +131,7 @@ for i in range(len(CO2)):
     if num_capteur[i]==4:
         co2_4.append(CO2[i])
 
-"CAPTEUR 5"        
+"CAPTEUR 5"   #O(len(num_capteur5))     
 date5=[]
 for i in range(len(date)):
     if num_capteur[i]==5:
@@ -156,7 +157,7 @@ for i in range(len(CO2)):
     if num_capteur[i]==5:
         co2_5.append(CO2[i])
 
-"CAPTEUR 6"      
+"CAPTEUR 6"   #O(len(num_capteur6))   
 date6=[]
 for i in range(len(date)):
     if num_capteur[i]==6:
@@ -183,7 +184,7 @@ for i in range(len(CO2)):
         co2_6.append(CO2[i])
 
 
-"CALCULS MATHEMATIQUES"
+"CALCULS MATHEMATIQUES" #O(len(liste))
 def min(liste):
     m=liste[0]
     for i in range(len(liste)):
@@ -207,7 +208,7 @@ def moy(liste):
 def var(liste):
     m=moy(liste)
     v=0
-    for k in range(0,len(liste)):
+    for k in range(len(liste)):
         v=v+(liste[k]-m)**2
     return(v/len(liste))
 
