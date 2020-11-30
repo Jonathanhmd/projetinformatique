@@ -337,6 +337,15 @@ print(ecart_type(co2_6))
 
 
 
+<<<<<<< Updated upstream
+=======
+
+#print(idc(temperature2,humidite2))
+#
+#coeff_pearson=pearsonr(temperature2,humidite2)[0]
+#print(coeff_pearson)
+
+>>>>>>> Stashed changes
 x=date
 y=temperature
 
