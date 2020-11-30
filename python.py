@@ -262,7 +262,11 @@ def idc(x,y):
 coeff_pearson=pearsonr(temp1,hum1)[0]
 print(coeff_pearson)
 print(idc(temp1,hum1))
-
+print(idc(temp2,hum2))
+print(idc(temp3,hum3))
+print(idc(temp4,hum4))
+print(idc(temp5,hum5))
+print(idc(temp6,hum6))
 
 "COMPARAISON"
 print('Moyenne température par capteur:')
@@ -353,17 +357,18 @@ print(ecart_type(co2_6))
 #print(coeff_pearson)
 
 
-x=date
-y=temperature
+x=date5
+y=temp1
 
 w=hum1
-v=lum1
-z=co2_1
+v=lum5
+z=co2_5
 
-plt.plot(x,y)
+plt.plot(x,z,'.')
+plt.plot(x,v,'.')
 plt.title('Evolution de la température en fonction du temps')
-plt.xlabel('temps')
-plt.ylabel('temperature')
+plt.xlabel('lum')
+plt.ylabel('co2')
 #plt.text(2,20,"min=")
 plt.show()
 plt.close()
@@ -381,7 +386,16 @@ def anomalie(liste):
     return "anomalie", L
 
 
+C1=[noise1,temp1,hum1,lum1,co2_1]
+C2=[noise2,temp2,hum2,lum2,co2_2]
+C3=[noise3,temp3,hum3,lum3,co2_3]
+C4=[noise4,temp4,hum4,lum4,co2_4]
+C5=[noise5,temp5,hum5,lum5,co2_5]
+C6=[noise6,temp6,hum6,lum6,co2_6]
 
+# def result(capteur):
+#     for i in range(len(capteur)):
+#         if len(anomalie(capteur[i]))
 
 
 
