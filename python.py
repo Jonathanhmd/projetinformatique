@@ -265,6 +265,7 @@ print(idc(temp1,hum1))
 
 
 "COMPARAISON"
+print('Moyenne température par capteur:')
 print(moy(temp1)) 
 print(moy(temp2))
 print(moy(temp3))
@@ -272,6 +273,7 @@ print(moy(temp4))
 print(moy(temp5))
 print(moy(temp6))
 
+print('Moyenne décibel par capteur:')
 print(moy(noise1)) 
 print(moy(noise2))
 print(moy(noise3))
@@ -279,6 +281,7 @@ print(moy(noise4))
 print(moy(noise5))
 print(moy(noise6))
 
+print('Moyenne humidité par capteur:')
 print(moy(hum1)) 
 print(moy(hum2))
 print(moy(hum3))
@@ -286,6 +289,7 @@ print(moy(hum4))
 print(moy(hum5))
 print(moy(hum6))
 
+print('Moyenne luminosité par capteur:')
 print(moy(lum1)) 
 print(moy(lum2))
 print(moy(lum3))
@@ -293,6 +297,7 @@ print(moy(lum4))
 print(moy(lum5))
 print(moy(lum6))
 
+print('Moyenne CO2 par capteur:')
 print(moy(co2_1)) 
 print(moy(co2_2))
 print(moy(co2_3))
@@ -300,7 +305,7 @@ print(moy(co2_4))
 print(moy(co2_5))
 print(moy(co2_6))
 
-
+print('Moyenne écart-type de la température par capteur:')
 print(ecart_type(temp1)) 
 print(ecart_type(temp2))
 print(ecart_type(temp3))
@@ -308,6 +313,7 @@ print(ecart_type(temp4))
 print(ecart_type(temp5))
 print(ecart_type(temp6))
 
+print('Moyenne écart-type des décibels par capteur:')
 print(ecart_type(noise1)) 
 print(ecart_type(noise2))
 print(ecart_type(noise3))
@@ -315,6 +321,7 @@ print(ecart_type(noise4))
 print(ecart_type(noise5))
 print(ecart_type(noise6))
 
+print('Moyenne écart-type de l humidité par capteur:')
 print(ecart_type(hum1)) 
 print(ecart_type(hum2))
 print(ecart_type(hum3))
@@ -322,6 +329,7 @@ print(ecart_type(hum4))
 print(ecart_type(hum5))
 print(ecart_type(hum6))
 
+print('Moyenne écart-type de la luminosité par capteur:')
 print(ecart_type(lum1)) 
 print(ecart_type(lum2))
 print(ecart_type(lum3))
@@ -329,6 +337,7 @@ print(ecart_type(lum4))
 print(ecart_type(lum5))
 print(ecart_type(lum6))
 
+print('Moyenne écart-type du CO2 par capteur:')
 print(ecart_type(co2_1)) 
 print(ecart_type(co2_2))
 print(ecart_type(co2_3))
@@ -370,7 +379,6 @@ def anomalie(liste):
         elif liste[i]>m+3*e_c:
             L.append(liste[i])
     return "anomalie", L
-
 
 
 
