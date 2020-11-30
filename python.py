@@ -258,6 +258,11 @@ def idc(x,y):
     return difprod/math.sqrt(xdiff2*ydiff2)
 
 
+coeff_pearson=pearsonr(temp1,hum1)[0]
+print(coeff_pearson)
+print(idc(temp1,hum1))
+
+
 "COMPARAISON"
 print(moy(temp1)) 
 print(moy(temp2))
@@ -331,15 +336,6 @@ print(ecart_type(co2_5))
 print(ecart_type(co2_6))
 
 
-
-
-
-
-
-#print(idc(temperature2,humidite2))
-#
-#coeff_pearson=pearsonr(temperature2,humidite2)[0]
-#print(coeff_pearson)
 
 x=date
 y=temperature
